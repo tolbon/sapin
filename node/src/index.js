@@ -1,12 +1,15 @@
 "use strict";
 
-
 /**
  * 
  * @param {Array<string>} argv 
  */
 function main(argv) {
-    const nb_floor = 1;
+    const nb_floor = parseInt(argv[2], 10);
+
+    if (isNaN(nb_floor)) { 
+        throw 'Parameter is not a number!'; 
+    }
     let nb_line = 4;
     const last_line_length = 7;
     let nb_space_middle = Math.floor(last_line_length / 2);
@@ -39,4 +42,9 @@ function main(argv) {
 
 }
 
+if (process.argv.length !== 3)
+{
+    console.error('Need 1 argument');
+    process.exit(1);
+}
 main(process.argv);
