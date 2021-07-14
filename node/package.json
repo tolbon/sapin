@@ -1,0 +1,16 @@
+{
+  "name": "sapin",
+  "version": "1.0.0",
+  "description": "Sapin in NodeJs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sapin",
+    "epitech",
+    "test"
+  ],
+  "author": "Jean-Baptiste Noblot",
+  "license": "ISC"
+}
