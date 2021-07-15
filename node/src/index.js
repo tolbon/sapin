@@ -59,21 +59,6 @@ function drawLeaf(nb_floor, nb_line_first_floor, nb_leaf_first_line, nb_char_mid
 function drawTrunk(nb_floor, nb_char_middle) {
     const nb_space = nb_char_middle - (nb_floor / 2);
 
-    for (let line = 0; line < nb_floor; line++) {
-        let str = '';
-        for (let index = 0; index < nb_space; index++) {
-            str += ' ';
-        }
-        for (let index = 0; index < nb_floor; index++) {
-            str += '|';
-        }
-        console.log(str);
-    }
-}
-
-function drawTrunkV2(nb_floor, nb_char_middle) {
-    const nb_space = nb_char_middle - (nb_floor / 2);
-
     let str = '';
     for (let index = 0; index < nb_space; index++) {
         str += ' ';
@@ -81,22 +66,15 @@ function drawTrunkV2(nb_floor, nb_char_middle) {
     for (let index = 0; index < nb_floor; index++) {
         str += '|';
     }
-
+    
     for (let line = 0; line < nb_floor; line++) {
         console.log(str);
     }
 }
 
-function drawTrunkV2(nb_floor, nb_char_middle) {
-    const nb_space = nb_char_middle - (nb_floor / 2);
-
-    let str = '';
-    for (let index = 0; index < nb_space; index++) {
-        str += ' ';
-    }
-    for (let index = 0; index < nb_floor; index++) {
-        str += '|';
-    }
+function drawTrunk2(nb_floor, nb_char_middle) {
+    const nb_space = nb_char_middle - Math.floor(nb_floor / 2);
+    const str = ' '.repeat(nb_space) + '|'.repeat(nb_floor);
     
     for (let line = 0; line < nb_floor; line++) {
         console.log(str);
