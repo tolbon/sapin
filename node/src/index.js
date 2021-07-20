@@ -17,8 +17,8 @@ function main(argv) {
     }
     const nb_floor = parseInt(argv[FIRST_ARGS_INDEX], 10);
 
-    if (isNaN(nb_floor)) {
-        console.error('Nb floor is not a number');
+    if (isNaN(nb_floor) || nb_floor < 1) {
+        console.error('Nb floor is not a positive number');
         process.exit(1);
     }
 
